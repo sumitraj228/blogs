@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="contact.css">
+    </head>
+    <body>
+
+        <div class="sidebar">
+            <a class="active" href="index.html">Home</a>
+            <a href="feed.html">Feeds</button></a>
+            <a href="feed.html">My Blogs</a>
+            <a href="create.html">Create</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">Logout</a>
+              
+          </div>
+          <div class="content">
+            <div class="container">
+                <div class="wrapper centered">
+              <article class="letter">
+                <div class="side">
+                  <h1>Contact us</h1>
+                  <p>
+                    <textarea placeholder="Your message"></textarea>
+                  </p>
+                </div>
+                <div class="side">
+                  <p>
+                    <input type="text" placeholder="Your name" >
+                  </p>
+                  <p>
+                    <input type="email" placeholder="Your email" >
+                  </p>
+                  <p>
+                    <button id="sendLetter">Send</button>
+                  </p>
+                </div>
+              </article>
+              <div class="envelope front"></div>
+              <div class="envelope back"></div>
+            </div>
+            <p class="result-message centered">Thank you for your message</p>
+       </div>
+        </div>
+
+        <script>
+            function addClass() {
+  document.body.classList.add("sent");
+}
+
+sendLetter.addEventListener("click", addClass);
+        </script>
+    </body>
+</html>

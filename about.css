@@ -1,0 +1,303 @@
+
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 250px;
+    margin-right: 10px;
+    padding: 1px 16px;
+    height: 100%;
+    width:84%;
+    
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+  
+
+
+
+
+
+
+
+  body {
+    background: #ffffff;
+  
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+h1, h2, h3 {
+    text-align: center;
+  }
+  
+  .team-members {
+    text-align: center;
+  }
+  
+  .team-members ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .team-members li {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: left;
+    width: 30%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .company {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .company-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .img {
+    width: 100%;
+    margin: 1rem 0rem 0rem 2rem;
+  }
+  
+  .img img {
+    width: 100%;
+  }
+  
+  .company-info {
+    width: 100%;
+    margin-right: 4rem;
+  }
+  
+  .company-info span {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .company-info span .our {
+    color: #ffdc0e;
+  }
+  
+  .company-info p {
+    font-size: 1.1rem;
+  }
+  
+  /* ----------------------------------------------- */
+  .team {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .team span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-bottom: 4px solid #ffdc0e;
+  }
+  
+  .container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    position: relative;
+    background: #fff;
+    max-width: 350px;
+    width: 350px;
+    margin: 20px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.1);
+  }
+  
+  .card-image {
+    max-height: 50vh;
+    overflow: hidden;
+  }
+  
+  .card-image img {
+    max-width: 100%;
+    height: auto;
+    visibility: hidden;
+  }
+  
+  .card-title span {
+    visibility: hidden;
+  }
+  
+  .yellow-surname {
+    color: #ffdc0e;
+  }
+  
+  .card-description span {
+    visibility: hidden;
+  }
+  
+  .card-mediaIcons a i {
+    visibility: hidden;
+  }
+  
+  .card-info {
+    position: relative;
+    color: #222;
+    padding: 20px;
+  }
+  
+  .card-info h3 {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .card-info h4 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  
+  .card-info a {
+    text-decoration: none;
+    color: navy;
+  }
+  
+  .card-info p {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  
+  .card-info .card-mediaIcons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-info .card-mediaIcons a {
+    color: #999;
+    font-size: 1.4em;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: color 0.3s ease;
+  }
+  
+  .card-info .card-mediaIcons a:hover {
+    color: #222;
+  }
+  
+  .card-mediaIcons a img {
+    width: 40px;
+  }
+  
+  .loading {
+    position: relative;
+    background: #e2e2e2;
+    overflow: hidden;
+  }
+  
+  .loading:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    animation: loading 1.5s infinite;
+  }
+  
+  .info {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  @keyframes loading {
+    100% {
+      transform: translateX(100%);
+    }
+  }
